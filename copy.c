@@ -31,13 +31,35 @@ int main (int argc, char *argv[])
    exit(0);
 }
 
-
+/*
+* Problem:The problem that this method solves is that the 
+* program has to find a directory and has no way to do so. 
+* We also need to terminate the code
+* Solution: The solution to this problem is that you must 
+* list the directory in the console and proceed to list 
+* the program name in order to complete the entire directory.
+* This method will also terminate itself ending the entire 
+* program after it is done as the program is complete and is 
+*ready to exit using the exit(1) command.
+*/
 void usage (char *progname)
 {
    fprintf(stderr, "./%s file-path1 file-path2 ... dest-dir\n", progname); exit(1);
 }
 
-
+/*
+* Problem: The problem that this method solves is that the 
+*program must terminate itself as well as give the reason 
+* why it is being terminated. This has to be done by the 
+* returning character that is being used.
+* Solution: The solution to this program is that one must 
+* print out the reason why the program has been terminated, 
+* this is done by using the character that has been returned 
+* in the method header. The code is printed to the console in 
+* order for the user to be able to read the reason why the 
+* code is terminated. The method then terminates itself via 
+* the command exit(1) in order to completely end the program.
+*/
 void die (char *reason)
 {
    fprintf(stderr, "%s\nPROGRAM ENDED\n", reason); exit(1);
